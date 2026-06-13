@@ -1,0 +1,217 @@
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 1rem;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+}
+
+@media (max-width: 1100px) {
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+    height: auto;
+    padding-bottom: 2rem;
+  }
+}
+
+.textContentWrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  max-height: calc(100vh - 160px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.textContent {
+  padding-right: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  max-height: 100%;
+  overflow-y: auto;
+  /* scrollbar-width: thin; Optional: show a thin scrollbar instead of none */
+  padding-bottom: 3rem; /* Extra padding so bottom text isn't hidden behind indicator */
+  padding-top: 1rem;
+}
+
+.textContent::-webkit-scrollbar {
+  width: 8px;
+}
+.textContent::-webkit-scrollbar-thumb {
+  background-color: var(--color-dark);
+  border-radius: 4px;
+}
+
+@media (max-width: 1100px) {
+  .textContent {
+    padding-right: 0;
+    text-align: center;
+    max-height: 50vh; /* Shorter on mobile so images are visible */
+  }
+}
+
+.heading {
+  font-size: 3rem;
+  margin-bottom: 0.2rem;
+  line-height: 1;
+  color: var(--color-primary);
+  -webkit-text-stroke: 1px var(--color-dark);
+  text-shadow: 4px 4px 0px var(--color-dark);
+}
+
+.subheading {
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+  line-height: 1.2;
+  color: var(--color-dark);
+}
+
+.highlightText {
+  color: var(--color-primary);
+}
+
+.bubble {
+  transform: rotate(-1deg);
+  margin-bottom: 1rem;
+  max-width: 95%;
+  flex-shrink: 0; /* Prevent collapsing in flex scroll container */
+}
+
+.bubbleHeading, .panelHeading {
+  margin-bottom: 0.3rem;
+  font-size: 1.2rem;
+}
+
+.bubbleText, .panelText {
+  font-size: 1rem;
+  line-height: 1.4;
+  margin-bottom: 0.4rem;
+}
+
+.panel {
+  background-color: #fff;
+  transform: rotate(1deg);
+  padding: 0.8rem 1.2rem;
+  max-width: 95%;
+  flex-shrink: 0; /* Prevent collapsing in flex scroll container */
+}
+
+@media (max-width: 1100px) {
+  .bubble, .panel {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.imageContainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 1100px) {
+  .imageContainer {
+    min-height: 400px;
+    margin-top: 2rem;
+  }
+}
+
+.halftoneOverlay {
+  position: absolute;
+  width: 140%;
+  max-width: 800px;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+}
+
+.rainbowBg {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: saturate(0.65) brightness(1.05) contrast(0.95);
+  opacity: 0.95;
+}
+
+.sticker1 {
+  position: absolute;
+  z-index: 2;
+  width: clamp(200px, 40vw, 380px);
+  left: 5%;
+  bottom: 5%;
+  transform: rotate(-5deg);
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.sticker1:hover {
+  transform: rotate(0deg) scale(1.05);
+}
+
+.sticker1 img, .sticker2 img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(6px 6px 0px #000);
+}
+
+.sticker2 {
+  position: absolute;
+  z-index: 1;
+  width: clamp(220px, 45vw, 420px);
+  right: 0%;
+  top: 5%;
+  transform: rotate(8deg);
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.sticker2:hover {
+  transform: rotate(0deg) scale(1.05);
+}
+
+@media (max-width: 1100px) {
+  .sticker1 {
+    width: clamp(150px, 45vw, 250px);
+    bottom: 0%;
+  }
+  .sticker2 {
+    width: clamp(180px, 50vw, 280px);
+    top: 0%;
+  }
+}
+
+.scrollIndicator {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  padding: 15px 0 10px 0;
+  background: linear-gradient(to top, #fff 40%, rgba(255,255,255,0));
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  color: var(--color-dark);
+  pointer-events: none;
+  animation: bounce 2s infinite;
+  z-index: 5;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-8px);
+  }
+  60% {
+    transform: translateY(-4px);
+  }
+}

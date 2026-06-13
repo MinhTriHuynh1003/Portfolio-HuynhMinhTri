@@ -1,0 +1,98 @@
+.mainContent {
+  padding: 0;
+}
+
+.sectionOverview {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 100px 4rem 2rem 4rem;
+}
+
+.sectionDrivers {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 180px 4rem 2rem 4rem;
+}
+
+.sectionTools {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 200px 4rem 2rem 4rem;
+}
+
+.sectionProjects {
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  padding: 150px 2rem 2rem 2rem;
+  /* Allow scrolling if content is taller than viewport */
+  overflow-y: auto;
+}
+
+.sectionContact {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 100px 4rem 2rem 4rem;
+}
+
+.badgeDefault {
+  background-color: var(--color-primary);
+  color: #fff;
+  top: 120px;
+}
+
+.badgeCenter {
+  background-color: var(--color-primary);
+  color: #fff;
+  top: 120px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 50;
+}
+
+.badgeTop {
+  background-color: var(--color-primary);
+  color: #fff;
+  top: 120px;
+  z-index: 20;
+}
+
+@media (max-width: 1100px) {
+  .sectionOverview {
+    padding-top: 60px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .sectionDrivers {
+    padding-top: 80px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .sectionTools {
+    padding-top: 80px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .sectionProjects {
+    padding-top: 80px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .sectionContact {
+    padding-top: 80px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .badgeDefault, .badgeCenter, .badgeTop {
+    top: 60px;
+    font-size: 1rem;
+    padding: 0.3rem 0.8rem;
+  }
+}
