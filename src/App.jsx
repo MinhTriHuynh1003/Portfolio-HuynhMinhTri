@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react';
+import { Analytics } from '@vercel/analytics/react';
 import Header from './components/Header';
 import Overview from './pages/Overview';
 import CareerDrivers from './pages/CareerDrivers';
@@ -83,6 +84,7 @@ function App() {
           </section>
         </div>
       </main>
+      <Analytics />
     </div>
   );
 }
