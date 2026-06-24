@@ -5,10 +5,11 @@ Welcome to my personal portfolio! This project is a uniquely designed, interacti
 ## 🌟 Features
 
 - **Comic-Book Aesthetics:** Features halftone patterns, speech bubbles, bold "Bangers" typography, and heavy drop shadows to simulate a real comic book.
-- **Scroll-Snapping Navigation:** Smooth, chapter-by-chapter scrolling experience utilizing CSS `scroll-snap`.
+- **Scroll-Snapping Navigation:** Smooth, chapter-by-chapter scrolling experience utilizing CSS `scroll-snap` (optimized for desktop).
+- **Fully Responsive (Mobile-First Layout):** Ensures a flawless viewing experience across all devices, with intelligent stacking, scrollable text boxes, and adaptive viewport sizing on mobile (down to 320px).
 - **Intersection Observer Animations:** Elements dynamically animate and reveal themselves as you scroll through the chapters.
-- **Responsive Design:** A robust grid and flexbox layout that gracefully scales down from desktop to split-screen and mobile devices.
 - **Data-Driven Architecture:** All project portfolios, tool stacks, and contact information are cleanly abstracted into a central `portfolioData.js` file for easy updates.
+- **Visitor Analytics:** Integrated with **Vercel Analytics** to track page views and audience insights invisibly.
 
 ---
 
@@ -17,7 +18,8 @@ Welcome to my personal portfolio! This project is a uniquely designed, interacti
 - **Framework:** React 19 + Vite
 - **Styling:** Vanilla CSS (CSS Modules for component scoping)
 - **Icons:** Devicon
-- **Deployment:** Ready for Vercel, Netlify, or Azure Static Web Apps.
+- **Tracking:** @vercel/analytics
+- **Deployment:** Vercel
 
 ---
 
@@ -128,6 +130,10 @@ To run this project locally on your machine:
    npm run dev
    ```
    *The server will typically start on `http://localhost:5173`.*
+
+## 📬 Contact & Links
+- **GitHub:** [MinhTriHuynh1003](https://github.com/MinhTriHuynh1003)
+- Feel free to reach out via the channels listed in the Contact section of the portfolio!
 
 ## 📝 License
 Created by Huỳnh Minh Trí. All rights reserved.

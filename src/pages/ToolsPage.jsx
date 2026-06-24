@@ -4,6 +4,7 @@ import styles from './ToolsPage.module.css';
 
 import { frontendTools, backendTools } from '../data/portfolioData';
 
+// ToolsPage component with mobile responsiveness support
 function ToolsPage() {
   const [loaded, setLoaded] = useState(false);
 
@@ -31,7 +32,7 @@ function ToolsPage() {
         />
 
         {/* Front-end Orbs */}
-        <div aria-hidden="true">
+        <div>
           {frontendTools.map((tool, index) => (
             <div 
               key={index} 
@@ -82,7 +83,7 @@ function ToolsPage() {
         />
 
         {/* Back-end Orbs */}
-        <div aria-hidden="true">
+        <div>
           {backendTools.map((tool, index) => (
             <div 
               key={index} 

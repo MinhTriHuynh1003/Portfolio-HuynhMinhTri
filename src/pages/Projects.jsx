@@ -4,6 +4,7 @@ import styles from './Projects.module.css';
 
 import { projects } from '../data/portfolioData';
 
+// ProjectCard component with mobile responsiveness support
 function ProjectCard({ proj, index }) {
   const contentRef = useRef(null);
   const [canScroll, setCanScroll] = useState(false);
@@ -35,7 +36,7 @@ function ProjectCard({ proj, index }) {
 
       {/* Thumbnail Image */}
       <div className={styles.imageContainer}>
-        <img src={proj.img} alt={proj.title} />
+        <img src={proj.img} alt={proj.title} className={styles.projectImage} />
       </div>
 
       {/* Content Body */}

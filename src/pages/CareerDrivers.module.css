@@ -183,8 +183,83 @@
   margin: 0;
 }
 
-@media (max-width: 992px) {
-  .narrativeBoxPassion, .narrativeBoxSkill, .narrativeBoxGrowth {
-    max-width: 85%;
+@media (max-width: 768px) {
+  .container {
+    height: auto !important;
+    min-height: 100% !important;
+    justify-content: flex-start !important;
+    padding: 20px 0 !important;
+  }
+
+  .comicPage {
+    width: 100% !important;
+    height: auto !important;
+    min-height: auto !important;
+    max-height: none !important;
+    grid-template-columns: 1fr !important;
+    grid-template-rows: auto auto auto !important;
+    gap: 1.5rem !important;
+    padding: 0.5rem !important;
+    border-width: 4px !important;
+    box-shadow: 6px 6px 0px rgba(0,0,0,0.2) !important;
+    transform: rotate(0deg) !important;
+  }
+
+  .panelBase {
+    height: auto !important;
+    min-height: auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+    overflow: visible !important;
+    border-width: 4px !important;
+  }
+
+  .panelPassion,
+  .panelSkill,
+  .panelGrowth {
+    grid-column: 1 / -1 !important;
+    grid-row: auto !important;
+    min-height: auto !important;
+  }
+
+  /* Stack narrative boxes and images statically */
+  .imgPassion, .imgSkill, .imgGrowth {
+    position: relative !important;
+    width: 100% !important;
+    height: 200px !important;
+    object-fit: cover !important;
+    right: auto !important;
+    bottom: auto !important;
+    top: auto !important;
+    left: auto !important;
+    transform: none !important;
+    order: -1 !important; /* Place image above text */
+  }
+
+  /* Sticker style adjustments for Skill/Growth graphics */
+  .imgSkill, .imgGrowth {
+    height: 160px !important;
+    width: auto !important;
+    align-self: center !important;
+    object-fit: contain !important;
+    margin: 10px 0 !important;
+    filter: none !important;
+  }
+
+  .narrativeBoxPassion, 
+  .narrativeBoxSkill, 
+  .narrativeBoxGrowth {
+    position: relative !important;
+    bottom: auto !important;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    max-width: 100% !important;
+    width: auto !important;
+    margin: 10px !important;
+    box-shadow: 4px 4px 0px var(--color-dark) !important;
+    border-width: 3px !important;
+    overflow-y: visible !important;
+    height: auto !important;
   }
 }

@@ -1,6 +1,7 @@
 import '../index.css';
 import styles from './CareerDrivers.module.css';
 
+// CareerDrivers component with mobile responsiveness support
 function CareerDrivers() {
   return (
     <div className={styles.container}>

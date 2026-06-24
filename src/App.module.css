@@ -96,3 +96,19 @@
     padding: 0.3rem 0.8rem;
   }
 }
+
+@media (max-width: 768px), (max-height: 650px) {
+  .sectionOverview,
+  .sectionDrivers,
+  .sectionTools,
+  .sectionProjects,
+  .sectionContact {
+    height: auto !important;
+    min-height: 100vh !important;
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+  }
+  .sectionProjects {
+    overflow-y: visible !important;
+  }
+}

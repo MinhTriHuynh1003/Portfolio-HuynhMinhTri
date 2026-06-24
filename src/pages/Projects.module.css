@@ -89,7 +89,7 @@
   background-color: #f0f0f0;
 }
 
-.imageContainer img {
+.projectImage {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -97,7 +97,7 @@
   transition: transform 0.3s ease;
 }
 
-.projectCard:hover .imageContainer img {
+.projectCard:hover .projectImage {
   transform: scale(1.05);
 }
 
@@ -226,5 +226,60 @@
   }
   60% {
     transform: translateY(-4px);
+  }
+}
+
+@media (max-width: 768px) {
+  .pageContainer {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .horizontalScrollContainer {
+    flex-direction: column !important;
+    overflow-x: visible !important;
+    scroll-snap-type: none !important;
+    height: auto !important;
+    gap: 2.5rem !important;
+    padding: 2rem 0 !important;
+    align-items: center !important;
+    width: 100% !important;
+  }
+
+  .projectCard {
+    flex: none !important;
+    width: 100% !important;
+    max-width: 340px !important;
+    height: auto !important;
+    max-height: none !important;
+    scroll-snap-align: none !important;
+    transform: rotate(0deg) !important; /* Reset rotation */
+    border-width: 4px !important;
+  }
+
+  .projectImage {
+    object-fit: cover !important;
+  }
+
+  .contentBody {
+    overflow-y: visible !important; /* Allow layout growth without inner scrollbars */
+    height: auto !important;
+    padding: 1rem !important;
+  }
+
+  .roleBox {
+    transform: none !important;
+  }
+
+  .btn {
+    transform: none !important;
+  }
+
+  .btnIcon, .btnText {
+    transform: none !important;
+  }
+
+  .scrollIndicator {
+    display: none !important; /* Stacked cards make internal scroll indicators obsolete */
   }
 }

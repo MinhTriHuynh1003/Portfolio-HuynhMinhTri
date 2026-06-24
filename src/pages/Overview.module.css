@@ -50,7 +50,8 @@
   .textContent {
     padding-right: 0;
     text-align: center;
-    max-height: 50vh; /* Shorter on mobile so images are visible */
+    max-height: none !important;
+    overflow-y: visible !important;
   }
 }
 
@@ -140,6 +141,7 @@
   display: block;
   filter: saturate(0.65) brightness(1.05) contrast(0.95);
   opacity: 0.95;
+  object-fit: cover;
 }
 
 .sticker1 {

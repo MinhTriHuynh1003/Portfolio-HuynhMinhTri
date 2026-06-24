@@ -458,3 +458,22 @@ a {
     padding: 6px 12px;
   }
 }
+
+@media (max-width: 768px), (max-height: 650px) {
+  html, body {
+    height: auto !important;
+    scroll-snap-type: none !important;
+    overflow-y: auto !important;
+    scroll-behavior: auto !important;
+  }
+  
+  .section-wrapper {
+    height: auto !important;
+    min-height: 100vh !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow: visible !important;
+    scroll-snap-align: none !important;
+    scroll-snap-stop: normal !important;
+  }
+}

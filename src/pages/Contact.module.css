@@ -154,3 +154,50 @@
     grid-template-columns: 1fr;
   }
 }
+
+@media (max-width: 768px) {
+  .container {
+    height: auto !important;
+    min-height: 100% !important;
+    padding: 20px 10px !important;
+    align-items: flex-start !important;
+  }
+
+  .panel {
+    margin-top: 60px !important;
+    padding: 1.2rem !important;
+    padding-top: 2rem !important;
+    transform: rotate(0deg) !important;
+    width: 100% !important;
+  }
+
+  .characterImg {
+    width: 80px !important;
+    top: -35px !important;
+    right: -5px !important;
+    position: absolute !important;
+  }
+
+  .heading {
+    font-size: 1.8rem !important;
+    max-width: 70% !important;
+    text-align: left !important;
+  }
+
+  .contactItem {
+    padding: 0.6rem !important;
+    gap: 0.6rem !important;
+  }
+
+  .platformName {
+    font-size: 1rem !important;
+  }
+
+  .platformLink {
+    font-size: 0.85rem !important;
+    white-space: normal !important;
+    word-break: break-all !important;
+  }
+}
+
+
